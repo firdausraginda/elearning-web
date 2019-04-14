@@ -84,7 +84,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .hover-card:hover {
   cursor: pointer;
   box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) !important;
