@@ -24,6 +24,9 @@ export default {
   },
   components: {
     Btn
+  },
+  created(){
+    console.log(this.$route.params.idPage);
   }
 };
 </script>

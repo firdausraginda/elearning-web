@@ -13,8 +13,8 @@
         </v-flex>
       </v-layout>
       <v-layout wrap>
-        <template v-for="item in items">
-          <v-flex xs6 md4 :key="item.title">
+        <template v-for="item in listADDIE">
+          <v-flex xs6 md4 :key="item.title" @click="moveNext(item.idPage)">
             <v-card class="elevation-0 px-2 py-2 rounded-card hover-card">
               <v-card-title justify-start>
                 <div justify-start>
@@ -41,71 +41,53 @@
 </template>
 
 <script>
-export default {
-  name: "home",
-  data() {
-    return {
-      items: [
-        {
-          title: "1. Introduction",
-          subtitle:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem.."
-        },
-        {
-          title: "2. Analysis",
-          subtitle:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem.."
-        },
-        {
-          title: "3. Design",
-          subtitle:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem.."
-        },
-        {
-          title: "4. Development",
-          subtitle:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem.."
-        },
-        {
-          title: "5. Implementation",
-          subtitle:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem.."
-        },
-        {
-          title: "6. Evaluation",
-          subtitle:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem.."
-        }
-      ]
-    };
-  },
-  created() {},
-  methods: {}
-};
+  import { dataADDIE } from '../assets/addie.js'
+
+  export default {
+    name: "home",
+    data() {
+      return {
+        listADDIE: dataADDIE
+      };
+    },
+    created() {
+    },
+    methods: {
+      moveNext(page){
+        this.$router.push({path: `/infoTest/${page}`})
+      }
+    }
+  };
 </script>
 
 <style lang="scss" scoped>
-.hover-card:hover {
-  cursor: pointer;
-  box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) !important;
-}
-.primer-color {
-  color: #018caa;
-}
-.rounded-card {
-  border-radius: 15px !important;
-}
-h1 {
-  font-size: 32px;
-  color: #018caa;
-}
-h4 {
-  font-weight: 400;
-}
-.second-color {
-  color: #8f8f8f;
-}
-.text--secondary {
-  line-height: 1.4;
-}
+  .hover-card:hover {
+    cursor: pointer;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) !important;
+  }
+
+  .primer-color {
+    color: #018caa;
+  }
+
+  .rounded-card {
+    border-radius: 15px !important;
+  }
+
+  h1 {
+    font-size: 32px;
+    color: #018caa;
+  }
+
+  h4 {
+    font-weight: 400;
+  }
+
+  .second-color {
+    color: #8f8f8f;
+  }
+
+  .text--secondary {
+    line-height: 1.4;
+  }
 </style>
