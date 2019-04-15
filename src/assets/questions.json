@@ -1,0 +1,122 @@
+[
+    {
+        "title": "analysis",
+        "content": [
+            {
+                "id": 1,
+                "text": "Berikut yang dilakukan pada tahapan analisis, kecuali ?",
+                "jwb": [
+                    "target audience analysis",
+                    "task analysis",
+                    "policy analysis",
+                    "topic analysis"
+                ],
+                "jwbBenar": "policy analysis"
+            },
+            {
+                "id": 2,
+                "text": "Yang tidak termasuk dalam target audience analysis adalah ?",
+                "jwb": [
+                    "analisis skill audience",
+                    "analisis pola tidur audience",
+                    "analisis pengetahuan audience",
+                    "analisis kemudahan akses audience dengan teknologi"
+                ],
+                "jwbBenar": "analisis pola tidur audience"
+            },
+            {
+                "id": 3,
+                "text": "Ada di tahapan keberapakah analisis ?",
+                "jwb": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "jwbBenar": "1"
+            },
+            {
+                "id": 4,
+                "text": "Tahapan analisis dipimpin oleh ?",
+                "jwb": [
+                    "Instructional Designer",
+                    "Subject Matter Expert",
+                    "Developer",
+                    "Project Manager"
+                ],
+                "jwbBenar": "Project Manager"
+            },
+            {
+                "id": 5,
+                "text": "Berkut skill yang diperlukan dalam tahap analisis, kecuali ?",
+                "jwb": [
+                    "berpikir kritis",
+                    "kerjasama tim",
+                    "rajin menabung",
+                    "berpikir out of the box"
+                ],
+                "jwbBenar": "rajin menabung"
+            }
+        ]
+    },
+    {
+        "title": "design",
+        "content": [
+            {
+                "id": 1,
+                "text": "Berikut yang dilakukan pada tahapan design, kecuali ?",
+                "jwb": [
+                    "target audience analysis",
+                    "task analysis",
+                    "policy analysis",
+                    "topic analysis"
+                ],
+                "jwbBenar": "policy analysis"
+            },
+            {
+                "id": 2,
+                "text": "Yang tidak termasuk dalam target audience analysis adalah ?",
+                "jwb": [
+                    "design skill audience",
+                    "design pola tidur audience",
+                    "design pengetahuan audience",
+                    "design kemudahan akses audience dengan teknologi"
+                ],
+                "jwbBenar": "design pola tidur audience"
+            },
+            {
+                "id": 3,
+                "text": "Ada di tahapan keberapakah design ?",
+                "jwb": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "jwbBenar": "1"
+            },
+            {
+                "id": 4,
+                "text": "Tahapan design dipimpin oleh ?",
+                "jwb": [
+                    "Instructional Designer",
+                    "Subject Matter Expert",
+                    "Developer",
+                    "Project Manager"
+                ],
+                "jwbBenar": "Project Manager"
+            },
+            {
+                "id": 5,
+                "text": "Berkut skill yang diperlukan dalam tahap design, kecuali ?",
+                "jwb": [
+                    "berpikir kritis",
+                    "kerjasama tim",
+                    "rajin menabung",
+                    "berpikir out of the box"
+                ],
+                "jwbBenar": "rajin menabung"
+            }
+        ]
+    }
+]

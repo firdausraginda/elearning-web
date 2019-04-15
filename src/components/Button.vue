@@ -1,6 +1,6 @@
 <template>
   <div class="button">
-    <v-btn class="white--text elevation-0">{{ text }}</v-btn>
+    <v-btn class="white--text elevation-0" @click="actions">{{ text }}</v-btn>
   </div>
 </template>
 
@@ -14,6 +14,53 @@
       text: {
         type: String,
         default: ''
+      },
+      to: {
+        type: String,
+        default: ''
+      },
+      idPage: {
+        type: String,
+        default: ''
+      },
+      typeBtn: {
+        type: String,
+        default: ''
+      },
+      questions: {
+        type: Array,
+        default: null
+      }
+    },
+    methods: {
+      actions() {
+        if (this.typeBtn == 'check') {
+          let arr = []
+          let counterBenar = 0
+          for (var i = 1; i < 6; i++) {
+            let retrievedAnswer = localStorage.getItem(`ans-pretest-${i}`);
+            if (retrievedAnswer != null) {
+              arr.push(retrievedAnswer)
+            }
+            else {
+              alert('Silahkan lengkapi jawaban')
+              return;
+            }
+          }
+          for (var j = 0; j < 5; j++) {
+            if (this.questions[j].jwbBenar == arr[j]) {
+              counterBenar++
+            }
+          }
+          console.log(counterBenar);
+          this.$router.push({ path: `${this.to}/${this.idPage}` })
+        } else if (this.typeBtn == 'link') {
+          if (this.to.match('test')) {
+            this.$router.push({ path: `${this.to}/${this.idPage}` })
+          } else {
+            this.$router.push({ path: `${this.to}` })
+          }
+        }
       }
     }
   };

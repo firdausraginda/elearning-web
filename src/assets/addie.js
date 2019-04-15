@@ -1,4 +1,4 @@
-var dataADDIE = [
+let dataADDIE = [
     {
         title: "1. Introduction",
         subtitle:

@@ -6,7 +6,7 @@
           <div class="second-color subheading text-xs-center mb-4">
             Sebelum mulai belajar, silahkan isi pre-test terlebih dahulu
           </div>
-          <btn class="text-xs-center" text="Mulai"/>
+          <btn class="text-xs-center" text="Mulai"  typeBtn="link" to="/test/pre-test" :idPage="idPage"/>
         </v-flex>
       </v-layout>
     </v-container>
@@ -14,37 +14,28 @@
 </template>
 
 <script>
-import Btn from '../components/Button'
+  import Btn from '../components/Button'
 
-export default {
-  data(){
-    return{
-
+  export default {
+    data() {
+      return {
+        idPage: this.$route.params.idPage
+      }
+    },
+    components: {
+      Btn
     }
-  },
-  components: {
-    Btn
-  },
-  created(){
-    console.log(this.$route.params.idPage);
-  }
-};
+  };
 </script>
 
 <style lang="scss" scoped>
-.infoTest{
-  height: 90vh;
-}
-.subheading {
-  font-family: "Poppins", sans-serif !important;
-  font-weight: lighter;
-  line-height: 1.5 !important;
-}
-.primer-color {
-  color: #018caa;
-}
+  .infoTest {
+    height: 90vh;
+  }
 
-.second-color {
-  color: #8f8f8f;
-}
+  .subheading {
+    font-family: "Poppins", sans-serif !important;
+    font-weight: lighter;
+    line-height: 1.5 !important;
+  }
 </style>

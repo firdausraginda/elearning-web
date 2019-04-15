@@ -3,7 +3,7 @@
     <v-container grid-list-md>
       <v-layout justify-center class="text-xs-center">
         <v-flex xs8>
-          <h1 class="mt-4">Ayo Belajar Tentang ADDIE !</h1>
+          <h1 class="mt-4 primer-color">Ayo Belajar Tentang ADDIE !</h1>
           <h4 class="my-5 px-5 second-color">
             <b> ADDIE merupakan </b> model pembelajaran yang disusun secara
             terprogram dengan urutan-urutan kegiatan yang sistematis dalam upaya
@@ -66,25 +66,16 @@
     box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) !important;
   }
 
-  .primer-color {
-    color: #018caa;
-  }
-
   .rounded-card {
     border-radius: 15px !important;
   }
 
   h1 {
     font-size: 32px;
-    color: #018caa;
   }
 
   h4 {
     font-weight: 400;
-  }
-
-  .second-color {
-    color: #8f8f8f;
   }
 
   .text--secondary {

@@ -12,7 +12,7 @@
 
 <style lang="scss">
 #app {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
@@ -29,5 +29,13 @@
       color: #42b983;
     }
   }
+}
+
+.primer-color {
+  color: #018caa;
+}
+
+.second-color {
+  color: #8f8f8f;
 }
 </style>
