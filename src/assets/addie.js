@@ -11,7 +11,7 @@ let dataADDIE = [
         subtitle:
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem..",
         idPage: 'analysis',
-        video: ''
+        video: 'https://www.youtube.com/embed/rnFl9dAMVkI'
     },
     {
         title: "3. Design",

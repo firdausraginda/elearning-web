@@ -72,7 +72,7 @@ export default {
   },
   methods: {
     radioAnswer(ans, id) {
-      localStorage.setItem(`ans-pretest-${id}`, ans);
+      localStorage.setItem(`ans-${this.$route.params.testType}-${id}`, ans);
     }
   }
 };

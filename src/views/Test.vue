@@ -3,7 +3,7 @@
     <v-container>
       <v-layout justify-center wrap>
         <v-flex md8>
-          <Breadcrumbs class="mt-3 mx-5" :journey="journey" />
+          <Breadcrumbs class="mt-3 mx-5" :journey="settingJourney()" />
         </v-flex>
         <v-flex md8>
           <h1 class="mt-4 mb-3 primer-color text-xs-center">{{ testType }}</h1>
@@ -23,8 +23,8 @@
             :questions="questions"
             class="text-xs-center mb-3 mt-3"
             text="Selesai"
-            :isCheck=true
-            to="/resultTest/pre-test"
+            btnType="check"
+            :to="moveTo"
             :idPage="idPage"
           />
         </v-flex>
@@ -42,19 +42,8 @@ import dataQuestions from "../assets/questions.json";
 export default {
   data() {
     return {
+      moveTo: `/resultTest/${this.$route.params.testType}`,
       testType: this.$route.params.testType,
-      journey: [
-        {
-          text: this.$route.params.idPage,
-          disabled: false,
-          href: "/"
-        },
-        {
-          text: this.$route.params.testType,
-          disabled: true,
-          href: "test"
-        }
-      ],
       questions: null,
       idPage: this.$route.params.idPage
     };
@@ -78,6 +67,45 @@ export default {
     },
     clearLocalStorage() {
       localStorage.clear();
+    },
+    settingJourney() {
+      if (this.$route.params.testType == "pre-test") {
+        return [
+          {
+            text: this.$route.params.idPage,
+            disabled: false,
+            href: "/"
+          },
+          {
+            text: this.$route.params.testType,
+            disabled: true,
+            href: "test"
+          }
+        ];
+      } else {
+        return [
+          {
+            text: this.$route.params.idPage,
+            disabled: false,
+            href: "/"
+          },
+          {
+            text: "Pre-Test",
+            disabled: false,
+            href: `/test/Pre-Test/${this.$route.params.idPage}`
+          },
+          {
+            text: "Belajar",
+            disabled: false,
+            href: `/content/${this.$route.params.idPage}`
+          },
+          {
+            text: "Post-Test",
+            disabled: true,
+            href: ""
+          }
+        ];
+      }
     }
   }
 };

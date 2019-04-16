@@ -4,6 +4,7 @@ import Home from '../src/views/Home.vue'
 import InfoTest from '../src/views/InfoTest.vue'
 import Test from '../src/views/Test.vue'
 import ResultTest from '../src/views/ResultTest.vue'
+import Content from '../src/views/Content.vue'
 
 Vue.use(Router)
 
@@ -30,6 +31,11 @@ export default new Router({
       path: '/resultTest/:testType/:idPage',
       name: 'resultTest',
       component: ResultTest
+    },
+    {
+      path: '/content/:idPage',
+      name: 'content',
+      component: Content
     }
   ],
   scrollBehavior() {

@@ -3,7 +3,7 @@
     <v-container>
       <v-layout justify-center wrap>
         <v-flex xs12 md8>
-          <Breadcrumbs class="mt-3 mx-5" :journey="journey" />
+          <Breadcrumbs class="mt-3 mx-5" :journey="settingJourney()" />
         </v-flex>
         <v-flex xs12 md8>
           <div class="subheading second-color text-xs-center my-4">
@@ -23,22 +23,33 @@
           </div>
         </v-flex>
         <v-flex xs12 md5>
-          <div class="subheading second-color text-xs-center mt-5 mb-3 pt-3">
+          <div
+            class="subheading second-color text-xs-center mt-5 mb-3 pt-3"
+            v-if="this.$route.params.testType == 'pre-test'"
+          >
             Selamat untuk nilai yang kamu dapat! Apakah sudah siap untuk
             belajar?
+          </div>
+          <div
+            class="subheading second-color text-xs-center mt-5 mb-3 pt-3"
+            v-else
+          >
+            Selamat untuk nilai yang kamu dapat !
           </div>
         </v-flex>
         <v-flex xs12 md8>
           <Btn
             class="text-xs-center"
-            text="Siap!"
-            :isCheck="false"
-            to="/belajar"
+            :text="textProps"
+            :btnType="settingBtnType()"
+            :to="toProps"
             :idPage="idPage"
           />
         </v-flex>
         <v-flex xs12 md8 v-if="score != 100">
-          <div class="subheading mx-5 red-color mt-4">Koreksi jawaban yang salah</div>
+          <div class="subheading mx-5 red-color mt-4">
+            Koreksi jawaban yang salah
+          </div>
         </v-flex>
         <v-flex xs12 md8>
           <div v-for="question in dataQuestionsSalah" :key="question.id">
@@ -64,22 +75,12 @@ import dataQuestions from "../assets/questions.json";
 export default {
   data() {
     return {
-      journey: [
-        {
-          text: this.$route.params.idPage,
-          disabled: false,
-          href: "/"
-        },
-        {
-          text: this.$route.params.testType,
-          disabled: true,
-          href: "test"
-        }
-      ],
       score: 0,
       idPage: this.$route.params.idPage,
       questionsAll: null,
-      dataQuestionsSalah: []
+      dataQuestionsSalah: [],
+      toProps: null,
+      textProps: null
     };
   },
   components: {
@@ -111,6 +112,56 @@ export default {
       } else {
         this.score = localStorage.getItem(`post-test-score`);
       }
+    },
+    settingBtnType() {
+      if (this.$route.params.testType == "pre-test") {
+        this.toProps = "/content";
+        this.textProps = "Siap!";
+        return "nonCheck";
+      } else {
+        this.toProps = "/";
+        this.textProps = "Selesai";
+        return "finish";
+      }
+    },
+    settingJourney() {
+      if (this.$route.params.testType == "pre-test") {
+        return [
+          {
+            text: this.$route.params.idPage,
+            disabled: false,
+            href: "/"
+          },
+          {
+            text: this.$route.params.testType,
+            disabled: true,
+            href: "test"
+          }
+        ];
+      } else {
+        return [
+          {
+            text: this.$route.params.idPage,
+            disabled: false,
+            href: "/"
+          },
+          {
+            text: "Pre-Test",
+            disabled: false,
+            href: `/test/Pre-Test/${this.$route.params.idPage}`
+          },
+          {
+            text: "Belajar",
+            disabled: false,
+            href: `/content/${this.$route.params.idPage}`
+          },
+          {
+            text: "Post-Test",
+            disabled: true,
+            href: ""
+          }
+        ];
+      }
     }
   }
 };
@@ -123,7 +174,7 @@ export default {
 .red-border {
   border-color: #f08080 !important;
 }
-.title{
+.title {
   font-family: "Poppins", sans-serif !important;
   font-weight: 400 !important;
 }
