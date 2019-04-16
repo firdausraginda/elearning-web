@@ -48,6 +48,7 @@
 <script>
 import Breadcrumbs from "../components/Breadcrumbs";
 import Btn from "../components/Button";
+import dataQuestions from "../assets/questions.json";
 
 export default {
   data() {
@@ -65,7 +66,9 @@ export default {
         }
       ],
       score: 0,
-      idPage: this.$route.params.idPage
+      idPage: this.$route.params.idPage,
+      questionsAll: null,
+      dataQuestionsSalah: []
     };
   },
   components: {
@@ -73,9 +76,25 @@ export default {
     Btn
   },
   created() {
+    this.getQuestions();
     this.getScore();
   },
   methods: {
+    getQuestions() {
+      dataQuestions.forEach(el => {
+        if (el.title == this.$route.params.idPage) {
+          this.questionsAll = el.content;
+        }
+      });
+      let arraySalah = JSON.parse(localStorage.getItem(`jwb-salah`));
+      arraySalah.forEach(arrSalah => {
+        this.questionsAll.forEach(quest => {
+          if (quest.id == arrSalah){
+            this.dataQuestionsSalah.push(quest)
+          }
+        });
+      });
+    },
     getScore() {
       if (this.$route.params.testType == "pre-test") {
         this.score = localStorage.getItem(`pre-test-score`);

@@ -37,7 +37,7 @@
 import Breadcrumbs from "../components/Breadcrumbs";
 import Question from "../components/Question";
 import Btn from "../components/Button";
-import questions from "../assets/questions.json";
+import dataQuestions from "../assets/questions.json";
 
 export default {
   data() {
@@ -70,7 +70,7 @@ export default {
   },
   methods: {
     getQuestions() {
-      questions.forEach(el => {
+      dataQuestions.forEach(el => {
         if (el.title == this.$route.params.idPage) {
           this.questions = el.content;
         }

@@ -57,7 +57,7 @@
           }
           let score = counterBenar / 5 * 100
           localStorage.setItem(`pre-test-score`, score);
-          localStorage.setItem(`jwb-salah`, jwbSalah);
+          localStorage.setItem(`jwb-salah`, JSON.stringify(jwbSalah));
         }
         this.$router.push({ path: `${this.to}/${this.idPage}` })
       }
