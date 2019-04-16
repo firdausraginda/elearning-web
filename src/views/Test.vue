@@ -3,7 +3,7 @@
     <v-container>
       <v-layout justify-center wrap>
         <v-flex md8>
-          <Breadcrumbs class="mt-3 px-5" :journey="journey" />
+          <Breadcrumbs class="mt-3 mx-5" :journey="journey" />
         </v-flex>
         <v-flex md8>
           <h1 class="mt-4 mb-3 primer-color text-xs-center">{{ testType }}</h1>
@@ -23,7 +23,7 @@
             :questions="questions"
             class="text-xs-center mb-3 mt-3"
             text="Selesai"
-            typeBtn="check"
+            :isCheck=true
             to="/resultTest/pre-test"
             :idPage="idPage"
           />
@@ -50,7 +50,7 @@ export default {
           href: "/"
         },
         {
-          text: "Pre-Test",
+          text: this.$route.params.testType,
           disabled: true,
           href: "test"
         }

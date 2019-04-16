@@ -38,4 +38,12 @@
 .second-color {
   color: #8f8f8f;
 }
+
+.green-color {
+  color: #08dba9;
+}
+
+.red-color {
+  color: #f08080;
+}
 </style>

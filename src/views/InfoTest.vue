@@ -6,7 +6,7 @@
           <div class="second-color subheading text-xs-center mb-4">
             Sebelum mulai belajar, silahkan isi pre-test terlebih dahulu
           </div>
-          <btn class="text-xs-center" text="Mulai"  typeBtn="link" to="/test/pre-test" :idPage="idPage"/>
+          <btn class="text-xs-center" text="Mulai" :isCheck=false to="/test/pre-test" :idPage="idPage"/>
         </v-flex>
       </v-layout>
     </v-container>

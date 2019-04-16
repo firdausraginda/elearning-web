@@ -66,16 +66,16 @@
                 "id": 1,
                 "text": "Berikut yang dilakukan pada tahapan design, kecuali ?",
                 "jwb": [
-                    "target audience analysis",
-                    "task analysis",
-                    "policy analysis",
-                    "topic analysis"
+                    "target audience design",
+                    "task design",
+                    "policy design",
+                    "topic design"
                 ],
-                "jwbBenar": "policy analysis"
+                "jwbBenar": "policy design"
             },
             {
                 "id": 2,
-                "text": "Yang tidak termasuk dalam target audience analysis adalah ?",
+                "text": "Yang tidak termasuk dalam target audience design adalah ?",
                 "jwb": [
                     "design skill audience",
                     "design pola tidur audience",

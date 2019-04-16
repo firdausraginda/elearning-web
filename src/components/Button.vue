@@ -23,9 +23,9 @@
         type: String,
         default: ''
       },
-      typeBtn: {
-        type: String,
-        default: ''
+      isCheck: {
+        type: Boolean,
+        default: null
       },
       questions: {
         type: Array,
@@ -34,9 +34,10 @@
     },
     methods: {
       actions() {
-        if (this.typeBtn == 'check') {
+        if (this.isCheck == true) {
           let arr = []
           let counterBenar = 0
+          let jwbSalah = []
           for (var i = 1; i < 6; i++) {
             let retrievedAnswer = localStorage.getItem(`ans-pretest-${i}`);
             if (retrievedAnswer != null) {
@@ -50,17 +51,15 @@
           for (var j = 0; j < 5; j++) {
             if (this.questions[j].jwbBenar == arr[j]) {
               counterBenar++
+            }else{
+              jwbSalah.push(this.questions[j].id)
             }
           }
-          console.log(counterBenar);
-          this.$router.push({ path: `${this.to}/${this.idPage}` })
-        } else if (this.typeBtn == 'link') {
-          if (this.to.match('test')) {
-            this.$router.push({ path: `${this.to}/${this.idPage}` })
-          } else {
-            this.$router.push({ path: `${this.to}` })
-          }
+          let score = counterBenar / 5 * 100
+          localStorage.setItem(`pre-test-score`, score);
+          localStorage.setItem(`jwb-salah`, jwbSalah);
         }
+        this.$router.push({ path: `${this.to}/${this.idPage}` })
       }
     }
   };
