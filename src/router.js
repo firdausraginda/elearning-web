@@ -31,5 +31,8 @@ export default new Router({
       name: 'resultTest',
       component: ResultTest
     }
-  ]
+  ],
+  scrollBehavior() {
+    return { x: 0, y: 0 }
+  }
 })

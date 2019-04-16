@@ -31,6 +31,16 @@
   }
 }
 
+.v-divider {
+  opacity: 0.5;
+}
+.radio-custom label{
+  font-size: 14px;
+  font-weight: 500;
+}
+.radio-custom i{
+  font-size: 22px;
+}
 .primer-color {
   color: #018caa;
 }

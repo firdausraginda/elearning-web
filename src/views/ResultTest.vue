@@ -23,7 +23,7 @@
           </div>
         </v-flex>
         <v-flex xs12 md5>
-          <div class="subheading second-color text-xs-center mt-4 mb-3 pt-3">
+          <div class="subheading second-color text-xs-center mt-5 mb-3 pt-3">
             Selamat untuk nilai yang kamu dapat! Apakah sudah siap untuk
             belajar?
           </div>
@@ -37,8 +37,18 @@
             :idPage="idPage"
           />
         </v-flex>
+        <v-flex xs12 md8 v-if="score != 100">
+          <div class="subheading mx-5 red-color mt-4">Koreksi jawaban yang salah</div>
+        </v-flex>
         <v-flex xs12 md8>
-          <div class="subheading mx-5 red-color mt-4">Jawaban yang salah</div>
+          <div v-for="question in dataQuestionsSalah" :key="question.id">
+            <Question
+              :idQuestion="question.id"
+              :textQuestion="question.text"
+              :correctAnswer="question.jwbBenar"
+              class="mt-4 mb-3 px-5"
+            />
+          </div>
         </v-flex>
       </v-layout>
     </v-container>
@@ -48,6 +58,7 @@
 <script>
 import Breadcrumbs from "../components/Breadcrumbs";
 import Btn from "../components/Button";
+import Question from "../components/Question";
 import dataQuestions from "../assets/questions.json";
 
 export default {
@@ -73,7 +84,8 @@ export default {
   },
   components: {
     Breadcrumbs,
-    Btn
+    Btn,
+    Question
   },
   created() {
     this.getQuestions();
@@ -87,12 +99,10 @@ export default {
         }
       });
       let arraySalah = JSON.parse(localStorage.getItem(`jwb-salah`));
-      arraySalah.forEach(arrSalah => {
-        this.questionsAll.forEach(quest => {
-          if (quest.id == arrSalah){
-            this.dataQuestionsSalah.push(quest)
-          }
-        });
+      this.questionsAll.forEach(el => {
+        if (arraySalah.includes(el.id)) {
+          this.dataQuestionsSalah.push(el);
+        }
       });
     },
     getScore() {
@@ -113,7 +123,10 @@ export default {
 .red-border {
   border-color: #f08080 !important;
 }
-
+.title{
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 400 !important;
+}
 .rounded-score {
   margin: auto;
   width: 238px;
