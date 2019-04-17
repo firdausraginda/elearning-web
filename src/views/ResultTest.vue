@@ -46,12 +46,12 @@
             :idPage="idPage"
           />
         </v-flex>
-        <v-flex xs12 md8 v-if="score != 100">
+        <v-flex xs12 md8 v-if="score != 100 && this.$route.params.testType == 'post-test'">
           <div class="subheading mx-5 red-color mt-4">
             Koreksi jawaban yang salah
           </div>
         </v-flex>
-        <v-flex xs12 md8>
+        <v-flex xs12 md8 v-if="this.$route.params.testType == 'post-test'">
           <div v-for="question in dataQuestionsSalah" :key="question.id">
             <Question
               :idQuestion="question.id"
