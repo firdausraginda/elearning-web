@@ -42,14 +42,25 @@ export default {
     actions() {
       if (this.btnType == "check") {
         this.countQuestion();
-        this.getJwbanUser();
-        this.itungScore();
-        this.$router.push({ path: `${this.to}/${this.idPage}` });
+        let isCompleteAnswer = this.getJwbanUser();
+        if (isCompleteAnswer == false) {
+          return;
+        } else {
+          this.itungScore();
+          this.moveDynamic();
+        }
       } else if (this.btnType == "nonCheck") {
-        this.$router.push({ path: `${this.to}/${this.idPage}` });
+        this.moveDynamic();
       } else {
         this.$router.push({ path: `${this.to}` });
       }
+    },
+    countQuestion() {
+      dataJmlQuestion.forEach(el => {
+        if (el.title == this.$route.params.idPage) {
+          this.jmlQuestion = el.content.length;
+        }
+      });
     },
     getJwbanUser() {
       for (var i = 0; i < this.jmlQuestion; i++) {
@@ -60,9 +71,11 @@ export default {
           this.jwbanUser.push(retrievedAnswer);
         } else {
           alert("Silahkan lengkapi jawaban");
-          return;
+          this.jwbanUser = [];
+          return false;
         }
       }
+      return true;
     },
     itungScore() {
       let counterBenar = 0;
@@ -79,12 +92,8 @@ export default {
       localStorage.setItem(`${this.$route.params.testType}-score`, score);
       localStorage.setItem(`jwb-salah`, JSON.stringify(this.jwbSalah));
     },
-    countQuestion() {
-      dataJmlQuestion.forEach(el => {
-        if (el.title == this.$route.params.idPage) {
-          this.jmlQuestion = el.content.length;
-        }
-      });
+    moveDynamic() {
+      this.$router.push({ path: `${this.to}/${this.idPage}` });
     }
   }
 };

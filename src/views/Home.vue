@@ -2,9 +2,9 @@
   <div class="home">
     <v-container grid-list-md>
       <v-layout justify-center class="text-xs-center">
-        <v-flex xs8>
+        <v-flex xs11 md8>
           <h1 class="mt-4 primer-color">Ayo Belajar Tentang ADDIE !</h1>
-          <h4 class="my-5 px-5 second-color">
+          <h4 class="my-5 px-3 second-color">
             <b> ADDIE merupakan </b> model pembelajaran yang disusun secara
             terprogram dengan urutan-urutan kegiatan yang sistematis dalam upaya
             pemecahan masalah belajar yang berkaitan dengan sumber belajar.
@@ -25,12 +25,17 @@
                 </div>
               </v-card-title>
             </v-card>
+            <v-divider class="is-show"></v-divider>
           </v-flex>
         </template>
       </v-layout>
       <v-layout justify-center class="text-xs-center my-2">
         <v-flex xs6 md2>
-          <v-card class="elevation-0 rounded-card hover-card pa-3" target="blank" href="https://github.com/firdausraginda/elearning-web">
+          <v-card
+            class="elevation-0 rounded-card hover-card pa-3"
+            target="blank"
+            href="https://github.com/firdausraginda/elearning-web"
+          >
             <div class="body-1 primer-color">Dev Mode</div>
             <div class="body-1 second-color">Lihat code web ini</div>
           </v-card>
@@ -41,44 +46,62 @@
 </template>
 
 <script>
-  import { dataADDIE } from '../assets/addie.js'
+import { dataADDIE } from "../assets/addie.js";
 
-  export default {
-    name: "home",
-    data() {
-      return {
-        listADDIE: dataADDIE
-      };
-    },
-    created() {
-    },
-    methods: {
-      moveNext(page){
-        this.$router.push({path: `/infoTest/${page}`})
-      }
+export default {
+  name: "home",
+  data() {
+    return {
+      listADDIE: dataADDIE
+    };
+  },
+  created() {},
+  methods: {
+    moveNext(page) {
+      this.$router.push({ path: `/infoTest/${page}` });
     }
-  };
+  }
+};
 </script>
 
 <style lang="scss" scoped>
+.is-show {
+  display: none;
+}
+.hover-card:hover {
+  cursor: pointer;
+  box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) !important;
+}
+
+.title {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.rounded-card {
+  border-radius: 15px !important;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h4 {
+  font-weight: 400;
+}
+
+.text--secondary {
+  line-height: 1.4;
+}
+
+@media (max-width: 576px) {
+  .is-show {
+    display: block;
+  }
+  .v-divider {
+    opacity: 1;
+  }
   .hover-card:hover {
-    cursor: pointer;
-    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) !important;
+    box-shadow: none !important;
   }
-
-  .rounded-card {
-    border-radius: 15px !important;
-  }
-
-  h1 {
-    font-size: 32px;
-  }
-
-  h4 {
-    font-weight: 400;
-  }
-
-  .text--secondary {
-    line-height: 1.4;
-  }
+}
 </style>

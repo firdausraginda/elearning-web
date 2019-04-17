@@ -55,7 +55,7 @@ export default {
           href: "/"
         }
       ],
-      urlVideo: ''
+      urlVideo: ""
     };
   },
   components: {
@@ -68,11 +68,23 @@ export default {
   methods: {
     getVideo() {
       dataADDIE.forEach(el => {
-          if (el.idPage == this.$route.params.idPage){
-              this.urlVideo = el.video
-          }
+        if (el.idPage == this.$route.params.idPage) {
+          this.urlVideo = el.video;
+        }
       });
     }
   }
 };
 </script>
+
+<style lang="scss" scoped>
+@media (max-width: 576px) {
+  .breadcrumbs{
+    margin: 6% 0 0 !important;
+  }
+  iframe {
+    margin: 10% 0 !important;
+    width: 100% !important;
+  }
+}
+</style>

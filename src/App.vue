@@ -34,11 +34,11 @@
 .v-divider {
   opacity: 0.5;
 }
-.radio-custom label{
+.radio-custom label {
   font-size: 14px;
   font-weight: 500;
 }
-.radio-custom i{
+.radio-custom i {
   font-size: 22px;
 }
 .primer-color {
@@ -56,4 +56,5 @@
 .red-color {
   color: #f08080;
 }
+
 </style>
