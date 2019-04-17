@@ -4,25 +4,58 @@
         "content": [
             {
                 "id": 1,
-                "text": "Berikut yang dilakukan pada tahapan introduction, kecuali ?",
+                "text": "Berikut tahapan yang tidak termasuk dalam model ADDIE adalah ?",
                 "jwb": [
-                    "target audience introduction",
-                    "task introduction",
-                    "policy introduction",
-                    "topic introduction"
+                    "Analysis",
+                    "Design",
+                    "Implementation",
+                    "Elaboration"
                 ],
-                "jwbBenar": "policy introduction"
+                "jwbBenar": "Elaboration"
             },
             {
                 "id": 2,
-                "text": "Yang tidak termasuk dalam target audience introduction adalah ?",
+                "text": "Ada di urutan keberapakah tahap Development dalam model ADDIE ?",
                 "jwb": [
-                    "introduction skill audience",
-                    "introduction pola tidur audience",
-                    "introduction pengetahuan audience",
-                    "introduction kemudahan akses audience dengan teknologi"
+                    "tidak ada tahapan development dalam model ADDIE",
+                    "2",
+                    "3",
+                    "4"
                 ],
-                "jwbBenar": "introduction pola tidur audience"
+                "jwbBenar": "3"
+            },
+            {
+                "id": 3,
+                "text": "Ada di urutan keberapakah tahap Design dalam model ADDIE ?",
+                "jwb": [
+                    "tidak ada tahapan design dalam model ADDIE",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "jwbBenar": "2"
+            },
+            {
+                "id": 4,
+                "text": "Ada di urutan keberapakah tahap Elaboration dalam model ADDIE ?",
+                "jwb": [
+                    "tidak ada tahapan elaboration dalam model ADDIE",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "jwbBenar": "tidak ada tahapan elaboration dalam model ADDIE"
+            },
+            {
+                "id": 5,
+                "text": "Model ADDIE cocok digunakan untuk permasalahan berikut, kecuali ?",
+                "jwb": [
+                    "membuat media pembelajaran",
+                    "membuat tutorial jus lemon",
+                    "menghitung domba dalam tidur",
+                    "merumuskan sistem untuk program pelatihan militer "
+                ],
+                "jwbBenar": "menghitung domba dalam tidur"
             }
         ]
     },
@@ -53,7 +86,7 @@
             },
             {
                 "id": 3,
-                "text": "Ada di tahapan keberapakah analisis ?",
+                "text": "Ada di urutan keberapakah tahap Analysis dalam model ADDIE ?",
                 "jwb": [
                     "1",
                     "2",
@@ -75,7 +108,7 @@
             },
             {
                 "id": 5,
-                "text": "Berkut skill yang diperlukan dalam tahap analisis, kecuali ?",
+                "text": "Berikut skill yang diperlukan dalam tahap analisis, kecuali ?",
                 "jwb": [
                     "berpikir kritis",
                     "kerjasama tim",
@@ -91,25 +124,58 @@
         "content": [
             {
                 "id": 1,
-                "text": "Berikut yang dilakukan pada tahapan design, kecuali ?",
+                "text": "Berikut yang ditentukan pada tahapan desain, kecuali ?",
                 "jwb": [
-                    "target audience design",
-                    "task design",
-                    "policy design",
-                    "topic design"
+                    "learning objectives",
+                    "instructional evaluation",
+                    "delivery strategy",
+                    "evaluation strategy"
                 ],
-                "jwbBenar": "policy design"
+                "jwbBenar": "instructional evaluation"
             },
             {
                 "id": 2,
-                "text": "Yang tidak termasuk dalam target audience design adalah ?",
+                "text": "Dalam studi kasus membuat e-learning, tahap desain memiliki outcome yaitu blueprint yang digunakan sebagai panduan dalam membuat course. Mana yang tidak termasuk dari blueprint tersebut ?",
                 "jwb": [
-                    "design skill audience",
-                    "design pola tidur audience",
-                    "design pengetahuan audience",
-                    "design kemudahan akses audience dengan teknologi"
+                    "struktur kurikulum",
+                    "nama-nama satpam di institusi",
+                    "learning objective",
+                    "metode penyampaian materi"
                 ],
-                "jwbBenar": "design pola tidur audience"
+                "jwbBenar": "nama-nama satpam di institusi"
+            },
+            {
+                "id": 3,
+                "text": "Ada di urutan keberapakah tahap Design dalam model ADDIE ?",
+                "jwb": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "jwbBenar": "2"
+            },
+            {
+                "id": 4,
+                "text": "Yang terlibat dalam tahap Design adalah ?",
+                "jwb": [
+                    "Instructional Designer",
+                    "Media Editor",
+                    "Developer",
+                    "Investor"
+                ],
+                "jwbBenar": "Instructional Designer"
+            },
+            {
+                "id": 5,
+                "text": "Berikut hal yang dilakukan pada tahap Design ?",
+                "jwb": [
+                    "mengevaluasi sistem",
+                    "menganalisis audience",
+                    "deploy sistem ke server",
+                    "menentukan media yang akan dipakai"
+                ],
+                "jwbBenar": "menentukan media yang akan dipakai"
             }
         ]
     },
@@ -120,23 +186,56 @@
                 "id": 1,
                 "text": "Berikut yang dilakukan pada tahapan development, kecuali ?",
                 "jwb": [
-                    "target audience development",
-                    "task development",
-                    "policy development",
-                    "topic development"
+                    "content development",
+                    "e2e testing",
+                    "storyboard development",
+                    "courseware development"
                 ],
-                "jwbBenar": "policy development"
+                "jwbBenar": "e2e testing"
             },
             {
                 "id": 2,
-                "text": "Yang tidak termasuk dalam target audience development adalah ?",
+                "text": "mengintegrasikan instructional methods dan media merupakan bagian dari ?",
                 "jwb": [
-                    "development skill audience",
-                    "development pola tidur audience",
-                    "development pengetahuan audience",
-                    "development kemudahan akses audience dengan teknologi"
+                    "content development",
+                    "e2e testing",
+                    "storyboard development",
+                    "courseware development"
                 ],
-                "jwbBenar": "development pola tidur audience"
+                "jwbBenar": "storyboard development"
+            },
+            {
+                "id": 3,
+                "text": "Ada di urutan keberapakah tahap Development dalam model ADDIE ?",
+                "jwb": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "jwbBenar": "3"
+            },
+            {
+                "id": 4,
+                "text": "Yang tidak terlibat dalam tahap Development adalah ?",
+                "jwb": [
+                    "Designer",
+                    "Editor",
+                    "Developer",
+                    "Course Administrator"
+                ],
+                "jwbBenar": "Course Administrator"
+            },
+            {
+                "id": 5,
+                "text": "Membangun media dan komponen yang interaktif adalah bagian dari ?",
+                "jwb": [
+                    "content development",
+                    "e2e testing",
+                    "storyboard development",
+                    "courseware development"
+                ],
+                "jwbBenar": "courseware development"
             }
         ]
     },
@@ -145,25 +244,58 @@
         "content": [
             {
                 "id": 1,
-                "text": "Berikut yang dilakukan pada tahapan implementation, kecuali ?",
+                "text": "Berikut tidak yang dilakukan pada tahapan implementation, kecuali ?",
                 "jwb": [
-                    "target audience implementation",
-                    "task implementation",
-                    "policy implementation",
-                    "topic implementation"
+                    "installation",
+                    "distribution",
+                    "managing learner's activities",
+                    "learning evaluation"
                 ],
-                "jwbBenar": "policy implementation"
+                "jwbBenar": "learning evaluation"
             },
             {
                 "id": 2,
-                "text": "Yang tidak termasuk dalam target audience implementation adalah ?",
+                "text": "Apa itu LMS?",
                 "jwb": [
-                    "implementation skill audience",
-                    "implementation pola tidur audience",
-                    "implementation pengetahuan audience",
-                    "implementation kemudahan akses audience dengan teknologi"
+                    "learning management searching",
+                    "lesson management subject",
+                    "learning management system",
+                    "lesson management system"
                 ],
-                "jwbBenar": "implementation pola tidur audience"
+                "jwbBenar": "learning management system"
+            },
+            {
+                "id": 3,
+                "text": "Ada di urutan keberapakah tahap Implementation dalam model ADDIE ?",
+                "jwb": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "jwbBenar": "4"
+            },
+            {
+                "id": 4,
+                "text": "Apa itu LCMS ?",
+                "jwb": [
+                    "learning component management searching",
+                    "lesson collaboration management signature",
+                    "learning content management system",
+                    "lesson collaboration management system"
+                ],
+                "jwbBenar": "learning content management system"
+            },
+            {
+                "id": 5,
+                "text": "Untuk menaruh sistem pada platform yang dipilih, dibutuhkan ?",
+                "jwb": [
+                    "editor",
+                    "manager",
+                    "developer",
+                    "designer"
+                ],
+                "jwbBenar": "developer"
             }
         ]
     },
@@ -172,25 +304,58 @@
         "content": [
             {
                 "id": 1,
-                "text": "Berikut yang dilakukan pada tahapan evaluation, kecuali ?",
+                "text": "Berikut yang di evaluasi pada tahapan evaluation, kecuali ?",
                 "jwb": [
-                    "target audience evaluation",
-                    "task evaluation",
-                    "policy evaluation",
-                    "topic evaluation"
+                    "ads in system",
+                    "users reactions",
+                    "achievement of learning objectives",
+                    "impact of the project on the organization"
                 ],
-                "jwbBenar": "policy evaluation"
+                "jwbBenar": "ads in system"
             },
             {
                 "id": 2,
-                "text": "Yang tidak termasuk dalam target audience evaluation adalah ?",
+                "text": "Tahap apa yang ada sebelum Evaluation ?",
                 "jwb": [
-                    "evaluation skill audience",
-                    "evaluation pola tidur audience",
-                    "evaluation pengetahuan audience",
-                    "evaluation kemudahan akses audience dengan teknologi"
+                    "analisis",
+                    "desain",
+                    "develop",
+                    "implementasi"
                 ],
-                "jwbBenar": "evaluation pola tidur audience"
+                "jwbBenar": "implementasi"
+            },
+            {
+                "id": 3,
+                "text": "Ada di urutan keberapakah tahap Evaluation dalam model ADDIE ?",
+                "jwb": [
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "jwbBenar": "5"
+            },
+            {
+                "id": 4,
+                "text": "Yang tidak terlibat di tahapan evaluation adalah ?",
+                "jwb": [
+                    "Instructional Designer",
+                    "Investor",
+                    "Developer",
+                    "Project Manager"
+                ],
+                "jwbBenar": "Investor"
+            },
+            {
+                "id": 5,
+                "text": "Berikut skill yang diperlukan dalam tahap Evaluation, kecuali ?",
+                "jwb": [
+                    "berpikir kritis",
+                    "kerjasama tim",
+                    "rajin menabung",
+                    "berpikir out of the box"
+                ],
+                "jwbBenar": "rajin menabung"
             }
         ]
     }

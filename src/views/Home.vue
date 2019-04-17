@@ -28,7 +28,7 @@
           </v-flex>
         </template>
       </v-layout>
-      <v-layout justify-center class="text-xs-center mt-1">
+      <v-layout justify-center class="text-xs-center my-2">
         <v-flex xs6 md2>
           <v-card class="elevation-0 rounded-card hover-card pa-3" target="blank" href="https://github.com/firdausraginda/elearning-web">
             <div class="body-1 primer-color">Dev Mode</div>
