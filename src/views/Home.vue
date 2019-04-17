@@ -14,7 +14,7 @@
       </v-layout>
       <v-layout wrap>
         <template v-for="item in listADDIE">
-          <v-flex xs6 md4 :key="item.title" @click="moveNext(item.idPage)">
+          <v-flex xs12 md4 :key="item.title" @click="moveNext(item.idPage)">
             <v-card class="elevation-0 px-2 py-2 rounded-card hover-card">
               <v-card-title justify-start>
                 <div justify-start>

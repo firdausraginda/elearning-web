@@ -1,5 +1,32 @@
 [
     {
+        "title": "introduction",
+        "content": [
+            {
+                "id": 1,
+                "text": "Berikut yang dilakukan pada tahapan introduction, kecuali ?",
+                "jwb": [
+                    "target audience introduction",
+                    "task introduction",
+                    "policy introduction",
+                    "topic introduction"
+                ],
+                "jwbBenar": "policy introduction"
+            },
+            {
+                "id": 2,
+                "text": "Yang tidak termasuk dalam target audience introduction adalah ?",
+                "jwb": [
+                    "introduction skill audience",
+                    "introduction pola tidur audience",
+                    "introduction pengetahuan audience",
+                    "introduction kemudahan akses audience dengan teknologi"
+                ],
+                "jwbBenar": "introduction pola tidur audience"
+            }
+        ]
+    },
+    {
         "title": "analysis",
         "content": [
             {
@@ -83,39 +110,87 @@
                     "design kemudahan akses audience dengan teknologi"
                 ],
                 "jwbBenar": "design pola tidur audience"
+            }
+        ]
+    },
+    {
+        "title": "development",
+        "content": [
+            {
+                "id": 1,
+                "text": "Berikut yang dilakukan pada tahapan development, kecuali ?",
+                "jwb": [
+                    "target audience development",
+                    "task development",
+                    "policy development",
+                    "topic development"
+                ],
+                "jwbBenar": "policy development"
             },
             {
-                "id": 3,
-                "text": "Ada di tahapan keberapakah design ?",
+                "id": 2,
+                "text": "Yang tidak termasuk dalam target audience development adalah ?",
                 "jwb": [
-                    "1",
-                    "2",
-                    "3",
-                    "4"
+                    "development skill audience",
+                    "development pola tidur audience",
+                    "development pengetahuan audience",
+                    "development kemudahan akses audience dengan teknologi"
                 ],
-                "jwbBenar": "1"
+                "jwbBenar": "development pola tidur audience"
+            }
+        ]
+    },
+    {
+        "title": "implementation",
+        "content": [
+            {
+                "id": 1,
+                "text": "Berikut yang dilakukan pada tahapan implementation, kecuali ?",
+                "jwb": [
+                    "target audience implementation",
+                    "task implementation",
+                    "policy implementation",
+                    "topic implementation"
+                ],
+                "jwbBenar": "policy implementation"
             },
             {
-                "id": 4,
-                "text": "Tahapan design dipimpin oleh ?",
+                "id": 2,
+                "text": "Yang tidak termasuk dalam target audience implementation adalah ?",
                 "jwb": [
-                    "Instructional Designer",
-                    "Subject Matter Expert",
-                    "Developer",
-                    "Project Manager"
+                    "implementation skill audience",
+                    "implementation pola tidur audience",
+                    "implementation pengetahuan audience",
+                    "implementation kemudahan akses audience dengan teknologi"
                 ],
-                "jwbBenar": "Project Manager"
+                "jwbBenar": "implementation pola tidur audience"
+            }
+        ]
+    },
+    {
+        "title": "evaluation",
+        "content": [
+            {
+                "id": 1,
+                "text": "Berikut yang dilakukan pada tahapan evaluation, kecuali ?",
+                "jwb": [
+                    "target audience evaluation",
+                    "task evaluation",
+                    "policy evaluation",
+                    "topic evaluation"
+                ],
+                "jwbBenar": "policy evaluation"
             },
             {
-                "id": 5,
-                "text": "Berkut skill yang diperlukan dalam tahap design, kecuali ?",
+                "id": 2,
+                "text": "Yang tidak termasuk dalam target audience evaluation adalah ?",
                 "jwb": [
-                    "berpikir kritis",
-                    "kerjasama tim",
-                    "rajin menabung",
-                    "berpikir out of the box"
+                    "evaluation skill audience",
+                    "evaluation pola tidur audience",
+                    "evaluation pengetahuan audience",
+                    "evaluation kemudahan akses audience dengan teknologi"
                 ],
-                "jwbBenar": "rajin menabung"
+                "jwbBenar": "evaluation pola tidur audience"
             }
         ]
     }

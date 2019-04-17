@@ -5,9 +5,15 @@
 </template>
 
 <script>
+import dataJmlQuestion from "../assets/questions.json";
+
 export default {
   data() {
-    return {};
+    return {
+      jmlQuestion: 0,
+      jwbanUser: [],
+      jwbSalah: []
+    };
   },
   props: {
     text: {
@@ -24,46 +30,61 @@ export default {
     },
     btnType: {
       type: String,
-      default: ''
+      default: ""
     },
     questions: {
       type: Array,
       default: null
     }
   },
+  created() {},
   methods: {
     actions() {
       if (this.btnType == "check") {
-        let arr = [];
-        let counterBenar = 0;
-        let jwbSalah = [];
-        for (var i = 1; i < 6; i++) {
-          let retrievedAnswer = localStorage.getItem(
-            `ans-${this.$route.params.testType}-${i}`
-          );
-          if (retrievedAnswer != null) {
-            arr.push(retrievedAnswer);
-          } else {
-            alert("Silahkan lengkapi jawaban");
-            return;
-          }
-        }
-        for (var j = 0; j < 5; j++) {
-          if (this.questions[j].jwbBenar == arr[j]) {
-            counterBenar++;
-          } else {
-            jwbSalah.push(this.questions[j].id);
-          }
-        }
-        let score = (counterBenar / 5) * 100;
-        localStorage.setItem(`${this.$route.params.testType}-score`, score);
-        localStorage.setItem(`jwb-salah`, JSON.stringify(jwbSalah));
+        this.countQuestion();
+        this.getJwbanUser();
+        this.itungScore();
         this.$router.push({ path: `${this.to}/${this.idPage}` });
       } else if (this.btnType == "nonCheck") {
         this.$router.push({ path: `${this.to}/${this.idPage}` });
       } else {
         this.$router.push({ path: `${this.to}` });
       }
+    },
+    getJwbanUser() {
+      for (var i = 0; i < this.jmlQuestion; i++) {
+        let retrievedAnswer = localStorage.getItem(
+          `ans-${this.$route.params.testType}-${i + 1}`
+        );
+        if (retrievedAnswer != null) {
+          this.jwbanUser.push(retrievedAnswer);
+        } else {
+          alert("Silahkan lengkapi jawaban");
+          return;
+        }
+      }
+    },
+    itungScore() {
+      let counterBenar = 0;
+
+      for (var i = 0; i < this.jmlQuestion; i++) {
+        if (this.questions[i].jwbBenar == this.jwbanUser[i]) {
+          counterBenar++;
+        } else {
+          this.jwbSalah.push(this.questions[i].id);
+        }
+      }
+
+      let score = (counterBenar / this.jmlQuestion) * 100;
+      localStorage.setItem(`${this.$route.params.testType}-score`, score);
+      localStorage.setItem(`jwb-salah`, JSON.stringify(this.jwbSalah));
+    },
+    countQuestion() {
+      dataJmlQuestion.forEach(el => {
+        if (el.title == this.$route.params.idPage) {
+          this.jmlQuestion = el.content.length;
+        }
+      });
     }
   }
 };
