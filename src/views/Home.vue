@@ -14,8 +14,11 @@
       </v-layout>
       <v-layout wrap>
         <template v-for="item in listADDIE">
-          <v-flex xs12 md4 :key="item.title" @click="moveNext(item.idPage)">
-            <v-card class="elevation-0 px-2 py-2 rounded-card hover-card">
+          <v-flex xs12 md4 :key="item.title">
+            <v-card
+              class="elevation-0 px-2 py-0 rounded-card hover-card"
+              @click="moveNext(item.idPage, 'card')"
+            >
               <v-card-title justify-start>
                 <div justify-start>
                   <div class="title primer-color">{{ item.title }}</div>
@@ -23,9 +26,16 @@
                     {{ item.subtitle }}
                   </div>
                 </div>
+                <div class="is-show">
+                  <v-btn
+                    class="elevation-0 mt-2 mb-0 "
+                    @click="moveNext(item.idPage, 'btn')"
+                    >mulai</v-btn
+                  >
+                </div>
               </v-card-title>
             </v-card>
-            <v-divider class="is-show"></v-divider>
+            <!-- <v-divider class="is-show" ></v-divider> -->
           </v-flex>
         </template>
       </v-layout>
@@ -57,8 +67,12 @@ export default {
   },
   created() {},
   methods: {
-    moveNext(page) {
-      this.$router.push({ path: `/infoTest/${page}` });
+    moveNext(page, component) {
+      if (screen.width > 576 && component == "card") {
+        this.$router.push({ path: `/infoTest/${page}` });
+      } else if (screen.width <= 576 && component == "btn") {
+        this.$router.push({ path: `/infoTest/${page}` });
+      }
     }
   }
 };
@@ -94,14 +108,32 @@ h4 {
 }
 
 @media (max-width: 576px) {
+  h4 {
+    margin: 15% 0 10% !important;
+  }
   .is-show {
     display: block;
   }
   .v-divider {
     opacity: 1;
+    margin: auto !important;
   }
   .hover-card:hover {
     box-shadow: none !important;
+  }
+  .v-btn {
+    background-color: #08dba9 !important;
+    color: white !important;
+    border-radius: 30px;
+    width: 100px;
+    height: 35px;
+    font-size: 14px;
+    text-transform: capitalize;
+    // letter-spacing: 1px;
+
+    // font-weight: 500;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 </style>

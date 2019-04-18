@@ -108,5 +108,8 @@ export default {
   width: 130px;
   height: 40px;
   text-transform: capitalize;
+
+  margin-right: 0 !important;
+  margin-left: 0 !important;
 }
 </style>

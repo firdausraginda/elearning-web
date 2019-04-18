@@ -22,7 +22,7 @@
             </v-layout>
           </div>
         </v-flex>
-        <v-flex xs12 md5>
+        <v-flex xs10 md5>
           <div
             class="subheading second-color text-xs-center mt-5 mb-3 pt-3"
             v-if="this.$route.params.testType == 'pre-test'"
@@ -47,7 +47,7 @@
           />
         </v-flex>
         <v-flex xs12 md8 v-if="score != 100 && this.$route.params.testType == 'post-test'">
-          <div class="subheading mx-5 red-color mt-4">
+          <div class="subheading mx-5 red-color mt-4 koreksi-jawaban-title">
             Koreksi jawaban yang salah
           </div>
         </v-flex>
@@ -189,5 +189,17 @@ export default {
 .score {
   font-weight: 300;
   font-size: 72px;
+}
+
+@media (max-width: 576px) {
+  .breadcrumbs {
+    margin: 6% !important;
+  }
+  .question{
+    padding: 0 6% !important;
+  }
+  .koreksi-jawaban-title{
+    margin: 8% 0 0% 6% !important;
+  }
 }
 </style>

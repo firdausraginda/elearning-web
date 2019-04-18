@@ -56,5 +56,4 @@
 .red-color {
   color: #f08080;
 }
-
 </style>

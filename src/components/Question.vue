@@ -28,7 +28,7 @@
       </div>
       <div>
         <v-layout wrap>
-          <v-radio-group class="a-0 pa-0 radio-custom" v-model="correctAnswer">
+          <v-radio-group class="ma-0 pa-0 radio-custom" v-model="correctAnswer">
             <v-flex md12>
               <v-radio
                 :label="correctAnswer"
@@ -82,5 +82,7 @@ export default {
 .question-text {
   font-size: 18px;
 }
-
+.v-divider {
+  opacity: 1 !important;
+}
 </style>

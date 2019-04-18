@@ -79,12 +79,16 @@ export default {
 
 <style lang="scss" scoped>
 @media (max-width: 576px) {
-  .breadcrumbs{
-    margin: 6% 0 0 !important;
+  .breadcrumbs {
+    margin: 6% 0 !important;
   }
   iframe {
-    margin: 10% 0 !important;
+    margin: 6% 0 0 !important;
     width: 100% !important;
+    height: 100% !important;
+  }
+  .button {
+    margin-top: 20% !important;
   }
 }
 </style>

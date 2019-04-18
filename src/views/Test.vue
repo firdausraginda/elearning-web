@@ -2,26 +2,26 @@
   <div class="test">
     <v-container>
       <v-layout justify-center wrap>
-        <v-flex md8>
+        <v-flex xs12 md8>
           <Breadcrumbs class="mt-3 mx-5" :journey="settingJourney()" />
         </v-flex>
-        <v-flex md8>
+        <v-flex xs12 md8>
           <h1 class="mt-4 mb-3 primer-color text-xs-center">{{ testType }}</h1>
         </v-flex>
-        <v-flex md8>
+        <v-flex xs12 md8>
           <div v-for="question in questions" :key="question.id">
             <Question
               :idQuestion="question.id"
               :textQuestion="question.text"
               :answersQuestion="question.jwb"
-              class="my-4 px-5"
+              class="my-4 px-5 question"
             />
           </div>
         </v-flex>
-        <v-flex md8>
+        <v-flex xs12 md8>
           <Btn
             :questions="questions"
-            class="text-xs-center mb-3 mt-3"
+            class="text-xs-center mb-3 mt-3 btn-custom"
             text="Selesai"
             btnType="check"
             :to="moveTo"
@@ -114,5 +114,16 @@ export default {
 <style lang="scss" scoped>
 h1 {
   text-transform: capitalize;
+}
+@media (max-width: 576px) {
+  .breadcrumbs {
+    margin: 6% !important;
+  }
+  .question {
+    padding: 0 6% !important;
+  }
+  .btn-custom{
+    margin-bottom: 8% !important;
+  }
 }
 </style>
