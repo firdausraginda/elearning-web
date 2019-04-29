@@ -17,12 +17,17 @@
           ></iframe>
         </v-flex>
         <v-flex xs12 md8>
-          <Btn
+          <!-- <Btn
             class="text-xs-center"
             text="Selesai"
             btnType="nonCheck"
             to="/test/post-test"
             :idPage="this.$route.params.idPage"
+          /> -->
+          <Btn 
+            class="text-xs-center"
+            text="Selesai"
+            @click.native="moveBtn()"          
           />
         </v-flex>
       </v-layout>
@@ -72,6 +77,9 @@ export default {
           this.urlVideo = el.video;
         }
       });
+    },
+    moveBtn(){
+      this.$router.push({path: `/test/post-test/${this.$route.params.idPage}`})
     }
   }
 };

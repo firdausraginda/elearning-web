@@ -1,6 +1,8 @@
 <template>
   <div class="button">
-    <v-btn class="white--text elevation-0" @click="actions">{{ text }}</v-btn>
+    <v-btn class="white--text elevation-0" @click="actions()">{{
+      text
+    }}</v-btn>
   </div>
 </template>
 
